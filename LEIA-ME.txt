@@ -1,0 +1,22 @@
+CENTRO DE PREVISÃO FINANCEIRA DM — ENTRADA SIMPLES
+
+Escolha Assistência, Clara Morgado ou José Morgado e introduza: financeiro
+Não usa email, contas ou autenticação Supabase. A palavra-passe está no HTML e controla apenas o ecrã de entrada. O acesso aos dados pela API é público (leitura e gravação). Os nomes no histórico são declarados, não identidades verificadas.
+
+CONFIGURAÇÃO
+1. No SQL Editor do projeto https://supabase.com/dashboard/project/lyihzeddgfbzmuqwrjya execute 01_configurar_supabase.sql. Execute também se já usou o SQL anterior: atualiza as permissões sem apagar movimentos.
+2. Publique centro_previsao_financeira_dm.html no GitHub Pages. Pode chamar-lhe index.html para ser a página inicial. O URL e a chave pública já estão configurados.
+3. Abra a página, escolha o nome e use financeiro. Crie um movimento de teste e confirme noutro navegador usando “Atualizar dados”. É necessária Internet. A entrada é pedida novamente ao recarregar ou sair.
+
+DADOS ANTIGOS
+Os movimentos antigos permanecem na chave dm_fin_v1 do navegador original. Não são importados automaticamente.
+Se o endereço e navegador continuam os mesmos, use “Importar dados deste navegador”. Identificadores existentes são ignorados, nunca substituídos.
+Se mudou de file:/// para GitHub Pages, exporte uma cópia JSON no endereço antigo. Faça primeiro uma cópia do HTML antigo. Substitua temporariamente o CONTEÚDO desse ficheiro pelo conteúdo de exportar_dados_antigos.html, mantendo exatamente o caminho e nome originais. Abra o mesmo endereço no mesmo navegador e perfil e clique “Exportar dados antigos”. Depois restaure o HTML anterior. O exportador não apaga nem modifica os dados.
+Na página publicada use “Importar cópia JSON”. Inclui parcelas e histórico. Não apague os dados originais antes de confirmar a importação. Guarde as cópias JSON em local privado, fora do repositório.
+
+GRAVAÇÃO
+Os três nomes partilham os mesmos dados. Se outro computador alterar a versão enquanto edita, a gravação é recusada para impedir a perda de alterações. Copie o que escreveu antes de atualizar e volte a editar os dados recentes.
+Se houver falha de rede, o formulário continua aberto. Atualize para confirmar se o servidor recebeu a gravação antes de repetir. Não são gravados movimentos automaticamente no navegador; pode descarregar cópias JSON. Limite: 50.000 movimentos / 20 MB.
+
+ESTADO
+Testes locais com servidor simulado. O SQL não foi executado no projeto e os dados antigos não foram transferidos automaticamente.
